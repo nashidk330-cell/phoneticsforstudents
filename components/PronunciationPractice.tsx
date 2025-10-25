@@ -155,3 +155,30 @@ export const PronunciationPractice: React.FC<PronunciationPracticeProps> = ({ ta
     };
     
     recognition.start();
+
+  }, [isListening, targetWord, variant, showScore]);
+
+  const feedbackColorClasses = {
+    success: 'text-green-700 bg-green-100 border-green-200',
+    error: 'text-red-700 bg-red-100 border-red-200',
+    info: 'text-blue-700 bg-blue-100 border-blue-200',
+  };
+
+  return (
+    <div className="relative">
+      <button 
+        onClick={handlePractice} 
+        disabled={isListening}
+        className="p-2 rounded-full bg-slate-200/50 hover:bg-blue-100 group transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-label={`Practice pronouncing ${targetWord}`}
+      >
+        <MicrophoneIcon isListening={isListening} />
+      </button>
+      {feedback && (
+         <div className={`absolute bottom-full right-0 mb-2 p-2 rounded-lg text-xs font-english shadow-lg w-max max-w-xs text-center z-10 border ${feedbackColorClasses[feedback.type]}`}>
+            {feedback.text}
+         </div>
+      )}
+    </div>
+  );
+};
