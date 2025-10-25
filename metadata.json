@@ -1,0 +1,7 @@
+{
+  "name": "Bangla Phonetics Notebook",
+  "description": "An interactive phonetics notebook for Bangladeshi students to learn English pronunciation from basic to advanced levels, with IPA transcription and voice integration.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
