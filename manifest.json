@@ -2,13 +2,14 @@
   "name": "Bangla Phonetics Notebook",
   "short_name": "Phonetics Notebook",
   "description": "An interactive phonetics notebook for Bangladeshi students to learn English pronunciation from basic to advanced levels, with IPA transcription and voice integration.",
-  "start_url": "./",
+  "start_url": "/phoneticsforstudents/",
+  "scope": "/phoneticsforstudents/",
   "display": "standalone",
   "background_color": "#f1f5f9",
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "./icon.svg",
+      "src": "/phoneticsforstudents/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
