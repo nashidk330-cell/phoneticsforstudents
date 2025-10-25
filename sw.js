@@ -1,23 +1,21 @@
 const CACHE_NAME = 'phonetics-notebook-cache-v1';
-
 const LOCAL_ASSETS = [
-  '/',
-  '/index.html',
-  '/index.tsx',
-  '/App.tsx',
-  '/types.ts',
-  // FIX: Renamed constants.tsx to constants.ts to match the actual file name.
-  '/constants.ts',
-  '/icon.svg',
-  '/components/Header.tsx',
-  '/components/Footer.tsx',
-  '/components/Sidebar.tsx',
-  '/components/ContentDisplay.tsx',
-  '/components/PhoneticCard.tsx',
-  '/components/Introduction.tsx',
-  '/components/Speak.tsx',
-  '/components/IPAChart.tsx',
-  '/components/FeedbackWorkspace.tsx'
+  './',
+  './index.html',
+  './index.tsx',
+  './App.tsx',
+  './types.ts',
+  './constants.ts',
+  './icon.svg',
+  './components/Header.tsx',
+  './components/Footer.tsx',
+  './components/Sidebar.tsx',
+  './components/ContentDisplay.tsx',
+  './components/PhoneticCard.tsx',
+  './components/Introduction.tsx',
+  './components/Speak.tsx',
+  './components/IPAChart.tsx',
+  './components/FeedbackWorkspace.tsx'
 ];
 
 // Install the service worker and cache local assets
@@ -45,7 +43,6 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-
         // Otherwise, fetch from network
         return fetch(event.request).then((networkResponse) => {
           // Check if we received a valid response before caching
@@ -61,7 +58,6 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
-
 
 // Clean up old caches
 self.addEventListener('activate', (event) => {
