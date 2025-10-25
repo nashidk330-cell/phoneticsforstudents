@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bangla Phonetics Notebook</title>
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#2563eb">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,6 @@
           background-color: #f8fafc; /* slate-50 */
           font-weight: 600;
       }
-
       .speak-wrapper {
         display: inline-flex;
         align-items: center;
@@ -55,51 +54,3 @@
         cursor: pointer;
         border-bottom: 1px dotted #94a3b8; /* slate-400 */
         transition: all 0.2s ease-in-out;
-        font-weight: 500;
-        color: #0f766e; /* teal-700 */
-        padding: 0.1rem 0.2rem;
-        border-radius: 0.25rem;
-      }
-      .speak-wrapper:hover {
-        background-color: #ccfbf1; /* teal-100 */
-        border-bottom-style: solid;
-        border-bottom-color: #14b8a6; /* teal-500 */
-      }
-      .speak-wrapper.speaking {
-        color: #1d4ed8; /* blue-700 */
-        background-color: #dbeafe; /* blue-100 */
-        border-bottom-color: #3b82f6; /* blue-500 */
-      }
-      .speak-icon {
-        width: 0.875rem;
-        height: 0.875rem;
-        opacity: 0.6;
-        transition: all 0.2s ease-in-out;
-      }
-      .speak-wrapper:hover .speak-icon, .speak-wrapper.speaking .speak-icon {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-      .speak-flag {
-        box-shadow: 0 0 1px 0 rgba(0,0,0,0.5);
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "vite": "https://aistudiocdn.com/vite@^7.1.12",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body class="bg-slate-50 text-slate-800">
-    <div id="root"></div>
-    <script type="module" src="/src/index.tsx"></script>
-  <script type="module" src="/index.tsx"></script>
-</body>
-</html>
